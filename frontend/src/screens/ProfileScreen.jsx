@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+// import { Link, useNavigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import FormContainer from '../components/FormContainer';
@@ -91,6 +91,8 @@ const ProfileScreen = () => {
         <Button type='submit' variant='primary' className='mt-3'>
           Update
         </Button>
+
+        {isLoading && <Loader />}
       </Form>
     </FormContainer>
   );
